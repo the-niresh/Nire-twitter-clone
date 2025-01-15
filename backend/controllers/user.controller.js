@@ -58,7 +58,7 @@ export const followUnfollowUser = async (req, res) => {
     }
   } catch (error) {
     console.log("error in followUnfollowUser", error.message);
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 
@@ -86,7 +86,7 @@ export const getSuggestedUsers = async (req, res) => {
     res.status(200).json(suggestedUsers);
   } catch (error) {
     console.log("error in getSuggestedUsers", error.message);
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 
@@ -152,6 +152,6 @@ export const updateUser = async (req, res) => {
     return res.status(200).json(user);
   } catch (error) {
     console.log("error in updateUser", error.message);
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: "Internal server error" });
   }
 };
